@@ -78,3 +78,6 @@ alias pydoc="python -m pydoc"
 if [ -n "${BASH-}" -o -n "${ZSH_VERSION-}" ] ; then
     hash -r 2>/dev/null
 fi
+
+export TWILIO_ACCOUNT_SID=ACf4d4fd8e6e8d8c77d2d06f91cfdf058f
+export TWILIO_AUTH_TOKEN=ebb921741c47010cbfadee401a6fb944
