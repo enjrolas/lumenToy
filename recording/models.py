@@ -9,3 +9,7 @@ class Recording(models.Model):
     callSID=models.TextField()
     timestamp=models.DateTimeField(auto_now_add=True)
 
+    def __repr__(self):
+        return "recording by %s, %d seconds at %s, saved at %s" % (self.callerName, self.duration, str(self.timestamp), self.recordingURL)
+
+    __str__=__repr__

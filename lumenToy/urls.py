@@ -4,6 +4,7 @@ from django.contrib import admin
 urlpatterns = patterns('',
     # Examples:
      url(r'^incoming', 'recording.views.incoming', name='recording'),
+     url(r'^$', 'recording.views.listRecordings', name='list'),
      url(r'^recordingComplete', 'recording.views.recordingComplete', name='recordingComplete'),
     # url(r'^g/', include('recording.urls')),
 

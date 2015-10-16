@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <script src="{% static 'audio.min.js' %}"></script>
+    <script>
+      audiojs.events.ready(function() {
+      var as = audiojs.createAll();
+      });
+    </script>
+  </head>
+  <body>
+    {% for recording in recordings %}
+    <div><span class="audio"><audio src="{{ recording.recordingURL }}" preload="auto" /></span><a href="{{ recording.recordingURL }}.mp3">{{recording.duration }} second recording</a> from {{ recording.callerName }}, calling from {{ recording.incomingNumber }} on {{ recording.timestamp }}</div>
+    {% endfor %}
+  </body>
+</html>
